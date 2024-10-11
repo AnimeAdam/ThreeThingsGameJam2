@@ -8,3 +8,10 @@ public enum UnitType {
         Soldier,
         PlayerTroops
     }
+
+public enum UnitState
+{
+    MovingToCastle,
+    AttackingPlayer,
+    AttackingEnemy
+}

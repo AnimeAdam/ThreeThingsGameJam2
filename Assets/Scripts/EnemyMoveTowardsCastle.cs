@@ -32,8 +32,10 @@ public class EnemyMoveTowardsCastle : MonoBehaviour
 
     void MoveTowardsCastle()
     {
-        float stepSpeed = this.GetComponent<EnemyStats>().movementSpeed * Time.deltaTime;
-        transform.position = UnityEngine.Vector3.MoveTowards(transform.position, selectedCastle.position, stepSpeed);
+        if (GetComponent<EnemyStats>().unitState == UnitState.MovingToCastle) {
+            float stepSpeed = this.GetComponent<EnemyStats>().movementSpeed * Time.deltaTime;
+            transform.position = UnityEngine.Vector3.MoveTowards(transform.position, selectedCastle.position, stepSpeed);
+        }
     }
 
 #region GettingPositionData

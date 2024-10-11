@@ -7,18 +7,25 @@ public class EnemyStats : MonoBehaviour
     public int maxHealth = 3;
     public int currentHealth;
     public float movementSpeed = 2f;
-    public UnitType enemyType;
+    public UnitType unitType;
+    public UnitState unitState;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        ChangeUnitState(UnitState.MovingToCastle);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ChangeUnitState(UnitState state)
+    {
+        unitState = state;
     }
 
     void ApplyDamage(int damage)
