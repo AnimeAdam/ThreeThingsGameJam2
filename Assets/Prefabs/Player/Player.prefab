@@ -112,6 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
-  minRange: 5
-  firingSpeed: 5
+  minRange: 1
+  firingSpeed: 500
   projectileLifeTime: 2
