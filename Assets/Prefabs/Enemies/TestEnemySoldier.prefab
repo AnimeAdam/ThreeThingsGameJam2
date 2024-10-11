@@ -207,4 +207,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   selectedCastle: {fileID: 0}
-  homeBaseCastle: 0
+  homeBaseCastle: 2
