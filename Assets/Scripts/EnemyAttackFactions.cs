@@ -29,6 +29,10 @@ public class EnemyAttackFactions : MonoBehaviour
             MoveTowardsEnemy();
             AttackEnemy();
         }
+        else if (GetComponentInParent<EnemyStats>().unitState == UnitState.AttackingPlayer && enemyToFight != null){
+            MoveTowardsEnemy();
+            AttackEnemy();
+        }
         else if (GetComponentInParent<EnemyStats>().unitState == UnitState.AttackingEnemy && enemyToFight == null){
             GetComponentInParent<EnemyStats>().ChangeUnitState(UnitState.MovingToCastle);
         }
@@ -111,6 +115,11 @@ public class EnemyAttackFactions : MonoBehaviour
                 GetComponentInParent<EnemyStats>().ChangeUnitState(UnitState.AttackingCastle);
                 enemyToFight = col.gameObject;
             }
+        }
+        if (col.gameObject.tag == "Player" && 
+        thisUnitType != UnitType.PlayerTroops){
+            GetComponentInParent<EnemyStats>().ChangeUnitState(UnitState.AttackingPlayer);
+            enemyToFight = col.gameObject;
         }
     }
 }

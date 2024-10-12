@@ -12,6 +12,10 @@ public class EnemyAttackMelee : MonoBehaviour
         {
             AttackEnemy(col);
         }
+        if (col.gameObject.CompareTag("Player"))
+        {
+            AttackPlayer(col);
+        }        
     }
 
     private void AttackEnemy(Collider2D col)
@@ -23,6 +27,14 @@ public class EnemyAttackMelee : MonoBehaviour
             col.gameObject.SendMessage("ApplyDamage", damage);
             DestoryThisMelee();
         }
+    }
+
+
+    private void AttackPlayer(Collider2D col)
+    {
+        int damage = 1;
+        col.gameObject.SendMessage("ApplyDamage", damage);
+        DestoryThisMelee();        
     }
 
     void DestoryThisMelee()

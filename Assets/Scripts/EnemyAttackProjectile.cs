@@ -12,6 +12,10 @@ public class EnemyAttackProjectile : MonoBehaviour
         {
             AttackEnemy(col);
         }
+        if (col.gameObject.CompareTag("Player"))
+        {
+            AttackPlayer(col);
+        }
     }
 
     private void AttackEnemy(Collider2D col)
@@ -23,6 +27,13 @@ public class EnemyAttackProjectile : MonoBehaviour
             col.gameObject.SendMessage("ApplyDamage", damage);
             DestoryThisProjectile();
         }
+    }
+
+    private void AttackPlayer(Collider2D col)
+    {
+        int damage = 1;
+        col.gameObject.SendMessage("ApplyDamage", damage);
+        DestoryThisProjectile();        
     }
 
     void DestoryThisProjectile()
