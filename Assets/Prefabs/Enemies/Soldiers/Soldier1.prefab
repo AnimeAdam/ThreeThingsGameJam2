@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1081340767681647291}
   - component: {fileID: -3272449947143135615}
   - component: {fileID: 6958913313334658413}
+  - component: {fileID: 9141755794396200536}
   m_Layer: 0
   m_Name: Soldier1
   m_TagString: Enemy
@@ -204,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1235e2d4a2efe2a42b62e4e6cd916d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followEnemy: {fileID: 9141755794396200536}
   CastlePositions:
   - {fileID: 0}
   - {fileID: 0}
@@ -232,3 +234,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9141755794396200536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878077266095836233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe502c72a91e984cbab57f548681610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasSeenEnemy: 0
