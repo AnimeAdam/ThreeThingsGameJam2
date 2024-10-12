@@ -36,6 +36,10 @@ public class EnemyAttackFactions : MonoBehaviour
             MoveTowardsEnemy();
             AttackEnemy();
         }
+        else if (GetComponentInParent<EnemyStats>().unitState == UnitState.AttackingCastle && enemyToFight != null){
+            MoveTowardsEnemy();
+            AttackEnemy();
+        }
         else if (GetComponentInParent<EnemyStats>().unitState == UnitState.AttackingEnemy && enemyToFight == null){
             GetComponentInParent<EnemyStats>().ChangeUnitState(UnitState.MovingToCastle);
         }

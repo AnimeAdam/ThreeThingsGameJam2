@@ -14,6 +14,12 @@ public class EnemyMoveTowardsCastle : MonoBehaviour
     public Transform selectedCastle;    
     public CastleSelection homeBaseCastle;
 
+    private void Awake()
+    {
+        SetCastlePositions();
+        PickRandomCastle();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +27,6 @@ public class EnemyMoveTowardsCastle : MonoBehaviour
         {
             Debug.LogError("FollowEnemy component is not assigned.");
         }
-        SetCastlePositions();
-        PickRandomCastle();
     }
 
     // Update is called once per frame
