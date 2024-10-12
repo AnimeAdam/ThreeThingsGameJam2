@@ -21,7 +21,12 @@ public class GotHit : MonoBehaviour
 
     private void TakeDamage(int v)
     {
+        
         currentHealth -= v;
+        if (currentHealth <= 0)
+        {
+            Destroy(this.gameObject);
+        }
         healthBar.UpdateHealthBar(currentHealth, MAXHEALTH);
         if (currentHealth <= 0)
         {
