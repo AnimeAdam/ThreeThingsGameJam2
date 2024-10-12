@@ -17,6 +17,11 @@ public class SceneManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);
     }
+
+    static public void GoToYouWin()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+    }
     
     public void QuitGame()
     {
