@@ -56,7 +56,7 @@ public class FollowEnemy : MonoBehaviour
     private void followEnemy(Vector2 pos)
     {
         float dist = Vector3.Distance(pos, transform.position);
-        if(dist > 1)
+        if(dist > 2)
             transform.position = Vector2.MoveTowards(transform.position, pos, speed * Time.deltaTime);
 
     }

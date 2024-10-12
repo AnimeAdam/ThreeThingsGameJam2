@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class EnemyAttackFactions : MonoBehaviour
 {
+    HandleAnimation handle;
     private GameObject enemyToFight;
     private float timer = 0f;
-
+    Animator anime;
     public GameObject attackObject;
     public float attackLifetime = 2f;
     public float attackSpeed = 200f;
@@ -19,7 +20,9 @@ public class EnemyAttackFactions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anime = GetComponent<Animator>();
         thisUnitType = GetComponentInParent<EnemyStats>().unitType;
+        handle = gameObject.GetComponentInParent<HandleAnimation>();
     }
 
     // Update is called once per frame
@@ -44,6 +47,7 @@ public class EnemyAttackFactions : MonoBehaviour
 #region MovementCode
     void MoveTowardsEnemy() {        
             float distance = Vector3.Distance(transform.parent.position, enemyToFight.transform.position);
+            
             float stepSpeed = GetComponentInParent<EnemyStats>().movementSpeed * Time.deltaTime;
 
             if (distance > minimumDistance)
@@ -54,6 +58,7 @@ public class EnemyAttackFactions : MonoBehaviour
 #region AttackCode
     void AttackEnemy()
     {
+
         timer += Time.deltaTime;
         if (timer >= timeBetweenAttacking) {
             switch (GetComponentInParent<EnemyStats>().unitAttackType){
@@ -76,6 +81,8 @@ public class EnemyAttackFactions : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.parent.position, enemyToFight.transform.position);
         Vector3 meleeSpawnPoint = UnityEngine.Vector3.MoveTowards(transform.parent.position, enemyToFight.transform.position, 0.1f);
+        handle.HandleAttackAnimation(transform.parent.position- enemyToFight.transform.position,thisUnitType);
+
         Quaternion meleeRotation = Quaternion.LookRotation(Vector3.forward, enemyToFight.transform.position - transform.parent.position);
 
         if (distance <= attackRange){
@@ -89,7 +96,7 @@ public class EnemyAttackFactions : MonoBehaviour
         float distance = Vector3.Distance(transform.parent.position, enemyToFight.transform.position);
         Vector3 projectileSpawnPoint = UnityEngine.Vector3.MoveTowards(transform.parent.position, enemyToFight.transform.position, 0.2f);
         Quaternion rotationDirection = Quaternion.LookRotation(Vector3.forward, enemyToFight.transform.position - transform.parent.position);
-
+        handle.HandleAttackAnimation(transform.parent.position - enemyToFight.transform.position,thisUnitType);
         if (distance <= attackRange) {
             var projectileTemp = Instantiate(attackObject, projectileSpawnPoint, rotationDirection);
             Vector3 projectileDirection = enemyToFight.transform.position - transform.parent.position;

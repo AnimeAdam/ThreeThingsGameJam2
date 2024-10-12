@@ -7,7 +7,7 @@ using UnityEngine;
 public class HandleAnimation : MonoBehaviour
 {
     Animator anime;
-    
+
     Vector2 posLastFrame;
     Vector2 posThisFrame;
 
@@ -42,5 +42,32 @@ public class HandleAnimation : MonoBehaviour
                 anime.SetTrigger("walk_down");
         }
     }
+    public void HandleAttackAnimation(Vector2 dir, UnitType unitype)
+    {
+        if (unitype != UnitType.PlayerTroops || unitype != UnitType.Soldier)
+            if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+            {
 
-}
+                if (dir.x > 0)
+                {
+                    //WalkRight;
+                    anime.SetTrigger("attack_right");
+                }
+                else
+                {
+                    anime.SetTrigger("attack_left");
+                }
+
+            }
+            else
+            {
+                if (dir.y > 0)
+                    anime.SetTrigger("attack_up");
+                else
+                    anime.SetTrigger("attack_down");
+            }
+            }
+    }
+
+    
+
