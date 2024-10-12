@@ -216,7 +216,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   selectedCastle: {fileID: 0}
-  homeBaseCastle: 2
+  homeBaseCastle: 3
 --- !u!95 &6958913313334658413
 Animator:
   serializedVersion: 5
