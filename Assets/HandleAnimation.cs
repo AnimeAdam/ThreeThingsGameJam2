@@ -6,50 +6,41 @@ using UnityEngine;
 
 public class HandleAnimation : MonoBehaviour
 {
-    enum State
-    {
-        WalkLeft,
-        WalkRight,
-        WalkUp,
-        WalkDown,
-        AttackUp,
-        AttackDown,
-        AttackLeft,
-        AttackRight,
-        Die
-    }
-    private State currentState;
+    Animator anime;
+  
     Vector2 posLastFrame;
     Vector2 posThisFrame;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        anime = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        posLastFrame = posThisFrame;
 
-        posThisFrame = transform.position;
-
-      currentState=  CheckMoveDirection();
     }
-
-    private State CheckMoveDirection()
+    public void SetDirection(Vector3 dir)
     {
-        if (posThisFrame.x > posLastFrame.x)
-            return State.WalkRight;
-        if (posThisFrame.x < posLastFrame.x)
-            return State.WalkRight;
+        if (dir.magnitude < 0.01f) return; // Ignore very small movements
+
+        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+        {
+            if (dir.x > 0)
+                //WalkRight;
+                anime.SetTrigger("walk_right");
+            else
+                anime.SetTrigger("walk_left");
+        }
         else
-            return State.WalkRight;
+        {
+            if (dir.y > 0)
+                anime.SetTrigger("walk_up");
+            else
+                anime.SetTrigger("walk_down");
+        }
     }
 
-    public void ChangeMoveDirection(Vector2 direction)
-    {
-
-    }
 }

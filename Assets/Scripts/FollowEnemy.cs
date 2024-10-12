@@ -7,7 +7,7 @@ public class FollowEnemy : MonoBehaviour
     private GameObject enemy;
     public bool hasSeenEnemy ;
     private float speed;
-
+    [SerializeField] private HandleAnimation handleAnimation;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +18,10 @@ public class FollowEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasSeenEnemy) { 
-        followEnemy(enemy.gameObject.transform.position);
+        if (hasSeenEnemy) {
+            UnityEngine.Vector3 direction = enemy.gameObject.transform.position - transform.position;
+            handleAnimation.SetDirection(direction);
+            followEnemy(enemy.gameObject.transform.position);
 
         }
     }

@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6623761267941819005}
   - component: {fileID: 7114338764405118888}
   - component: {fileID: 4806275951951406590}
+  - component: {fileID: -2617610953312701715}
   m_Layer: 0
   m_Name: Soldier2
   m_TagString: Enemy
@@ -208,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followEnemy: {fileID: 6623761267941819005}
+  handleAnimation: {fileID: -2617610953312701715}
   CastlePositions:
   - {fileID: 0}
   - {fileID: 0}
@@ -249,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasSeenEnemy: 0
+  handleAnimation: {fileID: -2617610953312701715}
 --- !u!61 &7114338764405118888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -339,3 +342,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &-2617610953312701715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878077266095836233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d18a04a5fe90c4599384dda5eb6f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

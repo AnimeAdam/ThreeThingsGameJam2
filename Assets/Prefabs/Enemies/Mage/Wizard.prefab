@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 1971861022747650136}
   - component: {fileID: 56840200056027868}
   - component: {fileID: 2711380642706954287}
+  - component: {fileID: -3021471648228228053}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Enemy
@@ -208,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followEnemy: {fileID: 56840200056027868}
+  handleAnimation: {fileID: -3021471648228228053}
   CastlePositions:
   - {fileID: 0}
   - {fileID: 0}
@@ -261,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasSeenEnemy: 0
+  handleAnimation: {fileID: -3021471648228228053}
 --- !u!61 &2711380642706954287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -306,3 +309,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &-3021471648228228053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878077266095836233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d18a04a5fe90c4599384dda5eb6f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
