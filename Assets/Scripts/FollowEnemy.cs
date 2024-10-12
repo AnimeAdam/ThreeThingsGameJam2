@@ -18,7 +18,7 @@ public class FollowEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasSeenEnemy) {
+        if (hasSeenEnemy && enemy.gameObject!= null) {
             UnityEngine.Vector3 direction = enemy.gameObject.transform.position - transform.position;
             handleAnimation.SetDirection(direction);
             followEnemy(enemy.gameObject.transform.position);
