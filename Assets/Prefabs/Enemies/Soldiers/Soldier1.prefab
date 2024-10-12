@@ -373,6 +373,10 @@ PrefabInstance:
       propertyPath: attackObject
       value: 
       objectReference: {fileID: 6568554853028562305, guid: e9c39d71ad2215ca8955c712245d8a60, type: 3}
+    - target: {fileID: 7207315895649074511, guid: ba4168ea67c36336ca49344af043308b, type: 3}
+      propertyPath: timeBetweenAttacking
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
