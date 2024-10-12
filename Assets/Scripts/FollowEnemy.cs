@@ -12,7 +12,7 @@ public class FollowEnemy : MonoBehaviour
     void Start()
     {
         hasSeenEnemy = false;
-        speed = 2f;
+        speed = 5f;
     }
 
     // Update is called once per frame

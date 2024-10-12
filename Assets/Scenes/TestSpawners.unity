@@ -227,6 +227,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8233690084877751001, guid: 6f8581435c757100e82cc66fa3423f92, type: 3}
     - target: {fileID: 3555455649553601900, guid: 10d0e0d6e2476bef095a7dc759c1ab68, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555455649553601900, guid: 10d0e0d6e2476bef095a7dc759c1ab68, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555455649553601900, guid: 10d0e0d6e2476bef095a7dc759c1ab68, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.017436793
       objectReference: {fileID: 0}
@@ -323,9 +331,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1718866625394962415, guid: 5d071f0a632ad80929650aacb9690b21, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718866625394962415, guid: 5d071f0a632ad80929650aacb9690b21, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389003411964943796, guid: 5d071f0a632ad80929650aacb9690b21, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389003411964943796, guid: 5d071f0a632ad80929650aacb9690b21, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619282620662584653, guid: 5d071f0a632ad80929650aacb9690b21, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619282620662584653, guid: 5d071f0a632ad80929650aacb9690b21, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7113487097144435880, guid: 5d071f0a632ad80929650aacb9690b21, type: 3}
       propertyPath: m_Name
       value: CastlePositions
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475036415891368840, guid: 5d071f0a632ad80929650aacb9690b21, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475036415891368840, guid: 5d071f0a632ad80929650aacb9690b21, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
