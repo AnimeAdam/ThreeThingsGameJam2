@@ -17,7 +17,10 @@ public class EnemyAttackMelee : MonoBehaviour
     private void AttackEnemy(Collider2D col)
     {
         if (col.GetComponent<EnemyStats>().unitType != thisUnitType){
-            col.gameObject.SendMessage("ApplyDamage", 1);
+            int damage = 1;
+            if (EnemyAdvantagesSystem.DoesAttackerHaveAdvantage(thisUnitType, col.GetComponent<EnemyStats>().unitType))
+                damage *= 2;
+            col.gameObject.SendMessage("ApplyDamage", damage);
             DestoryThisMelee();
         }
     }
