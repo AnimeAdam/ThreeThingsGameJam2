@@ -20,6 +20,17 @@ public class GotHit : MonoBehaviour
             Debug.Log("Collision detected");
             TakeDamage(10);
         }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Attack")
+        {
+            Debug.Log("Collision detected");
+            TakeDamage(10);
+        }
+
     }
 
     private void TakeDamage(int v)

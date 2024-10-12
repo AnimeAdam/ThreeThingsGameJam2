@@ -321,6 +321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AttackRange
       objectReference: {fileID: 0}
+    - target: {fileID: 2261825325816669331, guid: ba4168ea67c36336ca49344af043308b, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6093350169596790005, guid: ba4168ea67c36336ca49344af043308b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
