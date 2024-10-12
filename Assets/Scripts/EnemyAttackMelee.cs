@@ -32,7 +32,7 @@ public class EnemyAttackMelee : MonoBehaviour
 
     private void AttackPlayer(Collider2D col)
     {
-        if (col != null)
+        if (col.gameObject != null)
         {
             int damage = 1;
             col.gameObject.SendMessage("ApplyDamage", damage);

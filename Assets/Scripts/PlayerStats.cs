@@ -7,13 +7,11 @@ public class PlayerStats : MonoBehaviour
 {
     public int maxHealth = 10;
     public int currentHealth;
-    [SerializeField] private HealthBar healthBar;
-
+    public HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar = GetComponent<HealthBar>();
     }
 
     // Update is called once per frame
