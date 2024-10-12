@@ -10,6 +10,7 @@ public class EnemyAttackFactions : MonoBehaviour
 
     public GameObject attackObject;
     public float attackLifetime = 2f;
+    public float attackSpeed = 200f;
     public float attackRange = 2f;
     public float timeBetweenAttacking = 3f;
     public UnitType thisUnitType;
@@ -78,9 +79,18 @@ public class EnemyAttackFactions : MonoBehaviour
 
     void AttackShooter()
     {
-        // var projectileTemp = Instantiate(attackObject, transform.position + new Vector3(xRange, yRange,0f), rotationDirection);
-        // projectileTemp.GetComponent<Rigidbody2D>().AddForce(direction * firingSpeed);
-        // Destroy(projectileTemp, attackLifetime);        
+        float distance = Vector3.Distance(transform.parent.position, enemyToFight.transform.position);
+        Vector3 projectileSpawnPoint = UnityEngine.Vector3.MoveTowards(transform.parent.position, enemyToFight.transform.position, 0.2f);
+        Quaternion rotationDirection = Quaternion.LookRotation(Vector3.forward, enemyToFight.transform.position - transform.parent.position);
+
+        if (distance <= attackRange) {
+            var projectileTemp = Instantiate(attackObject, projectileSpawnPoint, rotationDirection);
+            Vector3 projectileDirection = enemyToFight.transform.position - transform.parent.position;
+            projectileTemp.GetComponent<Rigidbody2D>().AddForce(projectileDirection * attackSpeed);
+            projectileTemp.GetComponent<EnemyAttackProjectile>().thisUnitType = thisUnitType;
+
+            Destroy(projectileTemp, attackLifetime);
+        }
     }
 #endregion AttackCode
 
