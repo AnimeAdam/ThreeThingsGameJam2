@@ -6,13 +6,6 @@ using UnityEngine;
 
 public class EnemyMoveTowardsCastle : MonoBehaviour
 {
-    public enum CastleSelection{
-        CastlePointA = 0,
-        CastlePointB = 1,
-        CastlePointC = 2,
-        CastlePointD = 3,
-    }
-
     public Transform[] CastlePositions = new Transform[4];
     public Transform selectedCastle;    
     public CastleSelection homeBaseCastle;

@@ -32,6 +32,9 @@ public class EnemyAttackFactions : MonoBehaviour
         else if (GetComponentInParent<EnemyStats>().unitState == UnitState.AttackingEnemy && enemyToFight == null){
             GetComponentInParent<EnemyStats>().ChangeUnitState(UnitState.MovingToCastle);
         }
+        else if (GetComponentInParent<EnemyStats>().unitState == UnitState.AttackingCastle && enemyToFight == null){
+            GetComponentInParent<EnemyStats>().ChangeUnitState(UnitState.MovingToCastle);
+        }
     }
 
 #region MovementCode
@@ -99,6 +102,13 @@ public class EnemyAttackFactions : MonoBehaviour
         GetComponentInParent<EnemyStats>().unitState == UnitState.MovingToCastle){
             if (col.gameObject.GetComponent<EnemyStats>().unitType != thisUnitType){
                 GetComponentInParent<EnemyStats>().ChangeUnitState(UnitState.AttackingEnemy);
+                enemyToFight = col.gameObject;
+            }
+        }
+        if (col.gameObject.tag == "Castle" && 
+        GetComponentInParent<EnemyStats>().unitState == UnitState.MovingToCastle){
+            if (col.gameObject.GetComponent<GotHit>().castleType != gameObject.GetComponentInParent<EnemyMoveTowardsCastle>().homeBaseCastle) {
+                GetComponentInParent<EnemyStats>().ChangeUnitState(UnitState.AttackingCastle);
                 enemyToFight = col.gameObject;
             }
         }

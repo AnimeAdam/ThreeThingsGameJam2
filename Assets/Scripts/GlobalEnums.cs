@@ -13,10 +13,18 @@ public enum UnitState
 {
     MovingToCastle,
     AttackingPlayer,
-    AttackingEnemy
+    AttackingEnemy,
+    AttackingCastle
 }
 
 public enum UnitAttackType{
     Melee,
     Shooter
+}
+
+public enum CastleSelection{
+    CastlePointA = 0,
+    CastlePointB = 1,
+    CastlePointC = 2,
+    CastlePointD = 3,
 }

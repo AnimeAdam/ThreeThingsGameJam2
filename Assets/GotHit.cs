@@ -10,6 +10,7 @@ public class GotHit : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     const float MAXHEALTH = 100;
     float currentHealth = MAXHEALTH;
+    public CastleSelection castleType;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
