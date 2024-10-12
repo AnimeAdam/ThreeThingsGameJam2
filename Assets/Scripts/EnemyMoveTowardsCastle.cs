@@ -8,8 +8,7 @@ public class EnemyMoveTowardsCastle : MonoBehaviour
 {
 
  [SerializeField] private FollowEnemy followEnemy;
-
-
+  [SerializeField] private HandleAnimation handleAnimation;  
 
     public Transform[] CastlePositions = new Transform[4];
     public Transform selectedCastle;    
@@ -29,7 +28,7 @@ public class EnemyMoveTowardsCastle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(!followEnemy.hasSeenEnemy)
+        if(!followEnemy.hasSeenEnemy)
             MoveTowardsCastle();
     }
 
@@ -37,6 +36,8 @@ public class EnemyMoveTowardsCastle : MonoBehaviour
     {
         if (GetComponent<EnemyStats>().unitState == UnitState.MovingToCastle) {
             float stepSpeed = this.GetComponent<EnemyStats>().movementSpeed * Time.deltaTime;
+            UnityEngine.Vector3 direction = selectedCastle.position - transform.position;
+            handleAnimation.SetDirection(direction);
             transform.position = UnityEngine.Vector3.MoveTowards(transform.position, selectedCastle.position, stepSpeed);
         }
     }
