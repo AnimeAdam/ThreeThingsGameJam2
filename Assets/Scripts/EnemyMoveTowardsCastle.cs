@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class EnemyMoveTowardsCastle : MonoBehaviour
 {
+ [SerializeField] private FollowEnemy followEnemy;
     public enum CastleSelection{
         CastlePointA = 0,
         CastlePointB = 1,
@@ -20,6 +21,10 @@ public class EnemyMoveTowardsCastle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (followEnemy == null)
+        {
+            Debug.LogError("FollowEnemy component is not assigned.");
+        }
         SetCastlePositions();
         PickRandomCastle();
     }
@@ -27,7 +32,8 @@ public class EnemyMoveTowardsCastle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveTowardsCastle();
+        //if(!followEnemy.hasSeenEnemy)
+            MoveTowardsCastle();
     }
 
     void MoveTowardsCastle()

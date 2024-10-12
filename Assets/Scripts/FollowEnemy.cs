@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class FollowEnemy : MonoBehaviour
 {
+
     private GameObject enemy;
     public bool hasSeenEnemy ;
     private float speed;

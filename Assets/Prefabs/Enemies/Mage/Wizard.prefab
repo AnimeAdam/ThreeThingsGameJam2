@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1081340767681647291}
   - component: {fileID: -3272449947143135615}
   - component: {fileID: 8170601718948925463}
+  - component: {fileID: 1971861022747650136}
+  - component: {fileID: 56840200056027868}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Enemy
@@ -33,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -177,7 +179,9 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   movementSpeed: 2
-  enemyType: 2
+  unitType: 0
+  unitAttackType: 0
+  unitState: 0
 --- !u!114 &1081340767681647291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1235e2d4a2efe2a42b62e4e6cd916d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followEnemy: {fileID: 56840200056027868}
   CastlePositions:
   - {fileID: 0}
   - {fileID: 0}
@@ -230,3 +235,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1971861022747650136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878077266095836233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d18a04a5fe90c4599384dda5eb6f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &56840200056027868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878077266095836233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe502c72a91e984cbab57f548681610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasSeenEnemy: 0
