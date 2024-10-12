@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    Animator anime;
+
     public float speed = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
+        anime = GetComponent<Animator>();
 
     }
 
@@ -21,8 +24,26 @@ public class PlayerMovement : MonoBehaviour
     //Handles the X and Y movement of the player
     private void PlayerMove()
     {
-        float horizontalInput = (Input.GetAxis("Horizontal") * Time.deltaTime * speed) + transform.position.x;
-        float verticalInput = (Input.GetAxis("Vertical") * Time.deltaTime * speed) + transform.position.y;
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+        if (v > 0)
+        {
+            anime.SetTrigger("up");
+        }
+        else if (v < 0)
+        {
+            anime.SetTrigger("down");
+        }
+        else if (h > 0)
+        {
+            anime.SetTrigger("right");
+        }
+        else if (h < 0)
+        {
+            anime.SetTrigger("left");
+        }
+        float horizontalInput = (h * Time.deltaTime * speed) + transform.position.x;
+        float verticalInput = (v * Time.deltaTime * speed) + transform.position.y;
         
         transform.position = PlayerWithinBounds(ref horizontalInput, ref verticalInput);
     }
