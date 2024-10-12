@@ -8,6 +8,7 @@ public class EnemyStats : MonoBehaviour
     public int currentHealth;
     public float movementSpeed = 2f;
     public UnitType unitType;
+    public UnitAttackType unitAttackType;
     public UnitState unitState;
 
     // Start is called before the first frame update

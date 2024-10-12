@@ -15,3 +15,8 @@ public enum UnitState
     AttackingPlayer,
     AttackingEnemy
 }
+
+public enum UnitAttackType{
+    Melee,
+    Shooter
+}

@@ -177,6 +177,7 @@ MonoBehaviour:
   currentHealth: 0
   movementSpeed: 2
   unitType: 0
+  unitAttackType: 1
   unitState: 0
 --- !u!114 &1081340767681647291
 MonoBehaviour:
