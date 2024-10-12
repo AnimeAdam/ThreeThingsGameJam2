@@ -32,9 +32,12 @@ public class EnemyAttackMelee : MonoBehaviour
 
     private void AttackPlayer(Collider2D col)
     {
-        int damage = 1;
-        col.gameObject.SendMessage("ApplyDamage", damage);
-        DestoryThisMelee();        
+        if (col != null)
+        {
+            int damage = 1;
+            col.gameObject.SendMessage("ApplyDamage", damage);
+            DestoryThisMelee();
+        }
     }
 
     void DestoryThisMelee()
