@@ -39,5 +39,7 @@ public class GotHit : MonoBehaviour
     {
         if (castleType == CastleSelection.CastlePointA)
             SceneManager.GoToGameOver();
+        else
+            GameObject.Find("GameManager").GetComponent<GameMana>().castlesDestroyed++;
     }
 }
