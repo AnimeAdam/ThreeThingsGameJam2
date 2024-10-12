@@ -7,7 +7,7 @@ using UnityEngine;
 public class HandleAnimation : MonoBehaviour
 {
     Animator anime;
-  
+    
     Vector2 posLastFrame;
     Vector2 posThisFrame;
 
