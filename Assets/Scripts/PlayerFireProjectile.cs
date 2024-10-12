@@ -70,6 +70,7 @@ public class PlayerFireProjectile : MonoBehaviour
     void SpawnProjectile(Vector2 direction, float xRange, float yRange, Quaternion rotationDirection)
     {
         var projectileTemp = Instantiate(projectile, transform.position + new Vector3(xRange, yRange,0f), rotationDirection);
+        projectileTemp.tag = "Attack";
         projectileTemp.GetComponent<Rigidbody2D>().AddForce(direction * firingSpeed);
         Destroy(projectileTemp, projectileLifeTime);
     }
