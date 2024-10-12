@@ -23,5 +23,9 @@ public class GotHit : MonoBehaviour
     {
         currentHealth -= v;
         healthBar.UpdateHealthBar(currentHealth, MAXHEALTH);
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
