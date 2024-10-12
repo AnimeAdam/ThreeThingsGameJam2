@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 6628301297236020211}
   - component: {fileID: 2375024903270303769}
   m_Layer: 0
-  m_Name: Castle
+  m_Name: CastleD
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -255,7 +255,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -292061076, guid: 7b8b415bd5aea3b408bb3c35988a8b73, type: 3}
+  m_Sprite: {fileID: 646766563, guid: 7b8b415bd5aea3b408bb3c35988a8b73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

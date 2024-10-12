@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6528517733062631965}
   m_Layer: 0
   m_Name: AttackMelee
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,3 +90,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74041c071a787c5a78eba2f1f61877fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisUnitType: 0
