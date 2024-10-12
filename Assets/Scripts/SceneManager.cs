@@ -12,6 +12,11 @@ public class SceneManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
+
+    static public void GoToGameOver()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+    }
     
     public void QuitGame()
     {

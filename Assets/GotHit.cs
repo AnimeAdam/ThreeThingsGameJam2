@@ -21,11 +21,11 @@ public class GotHit : MonoBehaviour
     }
 
     private void TakeDamage(int v)
-    {
-        
+    {        
         currentHealth -= v;
         if (currentHealth <= 0)
         {
+            CheckIfGameOver();
             Destroy(this.gameObject);
         }
         healthBar.UpdateHealthBar(currentHealth, MAXHEALTH);
@@ -33,5 +33,11 @@ public class GotHit : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void CheckIfGameOver()
+    {
+        if (castleType == CastleSelection.CastlePointA)
+            SceneManager.GoToGameOver();
     }
 }
