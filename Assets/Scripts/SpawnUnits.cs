@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnUnits : MonoBehaviour
 {
     public float timeBetweenSpawning = 3f;
-    public GameObject spawnUnit;
+    public GameObject[] spawnUnits;
     float timer = 0f;
 
     // Start is called before the first frame update
@@ -31,6 +31,8 @@ public class SpawnUnits : MonoBehaviour
     }
 
     void SpawnAUnit(){
-        Instantiate(spawnUnit, transform.position, Quaternion.identity);
+        int spawnLimit = spawnUnits.Length;
+        int randomEnemy = Random.Range(0, spawnLimit);
+        Instantiate(spawnUnits[randomEnemy], transform.position, Quaternion.identity);
     }
 }
