@@ -23,6 +23,10 @@ public class ProjectileHit : MonoBehaviour
             collision.gameObject.SendMessage("ApplyDamage", 1);
             DestoryThisProjectile();
         }
+        if (collision.gameObject.CompareTag("Castle")) 
+        { 
+            DestoryThisProjectile();
+        }        
     }
 
     void DestoryThisProjectile()
