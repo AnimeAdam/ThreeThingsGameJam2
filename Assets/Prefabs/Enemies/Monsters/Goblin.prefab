@@ -216,7 +216,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   selectedCastle: {fileID: 0}
-  homeBaseCastle: 0
+  homeBaseCastle: 2
 --- !u!114 &-1704595677708143226
 MonoBehaviour:
   m_ObjectHideFlags: 0
