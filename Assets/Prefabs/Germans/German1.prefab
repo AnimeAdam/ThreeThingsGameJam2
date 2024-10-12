@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7230139125138907346}
   - component: {fileID: -5609232183153183577}
   - component: {fileID: 5410428155180007300}
+  - component: {fileID: 8072485881421998952}
   m_Layer: 0
   m_Name: German1
   m_TagString: Enemy
@@ -164,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followEnemy: {fileID: 5410428155180007300}
+  handleAnimation: {fileID: 0}
   CastlePositions:
   - {fileID: 0}
   - {fileID: 0}
@@ -202,6 +204,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasSeenEnemy: 0
+  handleAnimation: {fileID: 0}
+--- !u!114 &8072485881421998952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3316969520580328115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d18a04a5fe90c4599384dda5eb6f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9144393706977367244
 PrefabInstance:
   m_ObjectHideFlags: 0
