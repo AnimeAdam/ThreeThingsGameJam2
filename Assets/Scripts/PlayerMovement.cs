@@ -26,22 +26,31 @@ public class PlayerMovement : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-        if (v > 0)
+        Vector2 dir= new Vector2(0, 0);
+        if (Input.GetKeyDown("w"))
         {
+            dir = Vector2.up;
             anime.SetTrigger("up");
         }
-        else if (v < 0)
+        if (Input.GetKeyDown("s"))
         {
+            dir = Vector2.down;
             anime.SetTrigger("down");
+
         }
-        else if (h > 0)
+        if (Input.GetKeyDown("d"))
         {
+            dir = Vector2.right;
             anime.SetTrigger("right");
+
         }
-        else if (h < 0)
+        if (Input.GetKeyDown("a"))
         {
+            dir= Vector2.left;
             anime.SetTrigger("left");
+
         }
+      
         float horizontalInput = (h * Time.deltaTime * speed) + transform.position.x;
         float verticalInput = (v * Time.deltaTime * speed) + transform.position.y;
         
